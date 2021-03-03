@@ -52,10 +52,24 @@
 
 .header__center {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     cursor: pointer;
+    flex: 1;
 }
-
+.header__center_option_active .header__center_option {
+    padding:0 30px !important;
+}
+.header__center_option_active > .MuiSvgIcon-root {
+    
+    color:#3b5998;
+}
+.header__center_option_active, .header__center_option:hover {
+    background-color: #dfe3ee;
+    border-radius: 10px;
+    align-items: center;
+    border-bottom: none;
+    padding: 0 30px !important;
+}
 .header__right{
     display: flex;
     justify-content: space-between;
@@ -67,7 +81,6 @@
     display: flex;
     box-sizing: border-box;
     align-items: center;
-    background-color:#f7f7f7 ;
     border-radius: 33px;
     padding-top:0 !important;
     padding-bottom: 0 !important;
@@ -76,9 +89,13 @@
     
 
 }
-.avatar :hover {
-    background:		#857777;
-   background-size: cover;
+.avatar :hover {  
+
+    background-color:#f7f7f7 ;
+    border-radius: 10px;
+    align-items: center;
+    border-bottom: none;
+    padding: 0 30px !important;
 
 }
 

@@ -27,20 +27,20 @@ export default function Header() {
                 </div>
                    {/* center with icon */}
                    <div className="header__center">
-                            <div className="HomeIcon_active">
+                            <div className="header__center_option_active">
 
                                 <IconButton>
                                 <HomeIcon fontSize="large"/>
                                 </IconButton>
                             </div>
-                            <div className="LiveTvIcon">
+                            <div className="header__center_option">
 
                                 
                             <IconButton>
                                         <LiveTvIcon fontSize="large"/>
                                 </IconButton>
                             </div>
-                            <div className="PeopleIcon">
+                            <div className="header__center_option">
 
                                         <IconButton >
                                             <PeopleIcon fontSize="large"/>
