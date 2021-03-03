@@ -9,7 +9,7 @@ const Sidebarow = ({ src,Icon,title}) => {
                 src && <Avatar src={src}/>
             }
             {Icon && <Icon/>}
-            {title}
+            <h4>{title}</h4>
 
         </div>
     )
