@@ -7,6 +7,8 @@ import "./Header.css"
 import PeopleIcon from '@material-ui/icons/People';
 import  {IconButton, Avatar}  from "@material-ui/core"
 
+ import {Add,Forum,NotificationsActive,ExpandMore} from "@material-ui/icons"
+
 export default function Header() {
     return (
         <div className="header">
@@ -16,36 +18,37 @@ export default function Header() {
                       className="img" alt="fb__logo"/>
                       {/* left header__left search log with input */}
                       <div className="left__searchIcon_search__container">
-                          <SearchIcon className="searchIcon"/>
-                          <input className="header__left__input"/>
+                          <SearchIcon />
+                          <input  placeholder="search..."/>
+                        
                       </div>
 
 
                 </div>
                    {/* center with icon */}
                    <div className="header__center">
-                            <div className="HomeIcon">
+                            <div className="HomeIcon_active">
 
                                 <IconButton>
-                                <HomeIcon/>
+                                <HomeIcon fontSize="large"/>
                                 </IconButton>
                             </div>
                             <div className="LiveTvIcon">
 
                                 
                             <IconButton>
-                                        <LiveTvIcon/>
+                                        <LiveTvIcon fontSize="large"/>
                                 </IconButton>
                             </div>
                             <div className="PeopleIcon">
 
-                                        <IconButton id="icon">
-                                            <PeopleIcon/>
+                                        <IconButton >
+                                            <PeopleIcon fontSize="large"/>
                                         </IconButton>
                             </div>
                             <div className="SportsEsportsIcon">
                                 <IconButton>
-                                    <SportsEsportsIcon/>
+                                    <SportsEsportsIcon fontSize="large"/>
                                 </IconButton>
 
                             </div>
@@ -56,14 +59,27 @@ export default function Header() {
                             <div className="header__right">
                                  
                                   <div className="avatar" >
-                                     <div>
-                                     <IconButton>
-                                          <Avatar/>
-                                      </IconButton>
-                                     </div>
-                                      <h3 className="name">kirobezo</h3>
+                                     <Avatar/>
+                                      <h4 >kirobezo</h4>
                                       
                                   </div>
+                                  <IconButton>
+                                  <Add />
+                                  </IconButton>
+
+                                  <IconButton>
+                                  <Forum/>
+                                  </IconButton>
+
+                                  <IconButton>
+                                  
+                                  <NotificationsActive/>
+                                  </IconButton>
+                                  <IconButton>
+                                  <ExpandMore/>
+                                  </IconButton>
+                             
+                                    
                             </div>
 
         </div>
