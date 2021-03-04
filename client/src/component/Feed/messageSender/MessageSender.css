@@ -1,0 +1,36 @@
+.MessageSender {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 15px;
+    
+
+    box-shadow:0 15px 17px -7px rgba( 0, 0, 0, 0.75);
+    width:80%;
+    box-sizing: border-box;
+}
+.MessageSender__top {
+    padding:20px 5px;
+    justify-content: center;
+}
+.input__container{
+    background-color:#f7f7f7;
+    padding: 0 30px;
+    border-radius:33px;
+   align-items: center;
+   box-sizing: border-box;
+}
+.input__container>input {
+    margin-top: 10px;
+    background-color: transparent;
+    border: none;
+    outline: none
+}
+.MessageSender__top {
+    display: flex;
+    width: 100%;
+}
+.MessageSender__top__form {
+    display:  flex;
+}
