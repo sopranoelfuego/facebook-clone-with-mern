@@ -1,6 +1,7 @@
 import React from 'react'
 import MessageSender from "./messageSender/MessageSender"
 import Stories from "./Story/Stories"
+import "./feed.css"
 
 const Feed = () => {
     return (

@@ -1,13 +1,20 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {Avatar} from "@material-ui/core" 
 import "./SingleStory.css"
 
-const SingleStory = ({img,profilePic,title}) => {
+
+const SingleStory = ({img,profilePic,title,addStory}) => {
+    const [file,setFile]=useState("")
     return (
-        <div className="SingleStory" style={{background:`url(${img})`}}>
+        <>
+        {!addStory ? <div className="SingleStory" style={{background:`url(${img})`}}>
             <Avatar src={profilePic} className="Story__avatar"/>
             <h4 >{title}</h4>
-        </div>
+        </div>:<div className="SingleStory">
+              
+                
+            </div>}
+        </>
     )
 }
 

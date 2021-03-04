@@ -5,6 +5,10 @@ const Stories= () => {
     // {img,profilePic,title}
     return (
         <div className="Stories">
+               <SingleStory 
+               img="https://scontent.fbjm1-1.fna.fbcdn.net/v/t1.0-9/147382502_3252376431655406_6044184046602460618_o.jpg?_nc_cat=109&ccb=3&_nc_sid=09cbfe&_nc_ohc=GtnjuoO9BNwAX8R4kRx&_nc_ht=scontent.fbjm1-1.fna&oh=6c5bf14fb4a3323f4a9a7ea8900b5e62&oe=6065DD2C"
+               title="add story"
+               />
                 <SingleStory
                 img="https://scontent.fbjm1-1.fna.fbcdn.net/v/t31.0-0/c0.0.206.206a/p206x206/21457621_2215566145336445_4298654910554727998_o.jpg?_nc_cat=105&ccb=3&_nc_sid=da31f3&_nc_ohc=xmRU0VadKYcAX_Ew7QZ&_nc_ht=scontent.fbjm1-1.fna&tp=27&oh=1bb40cb92b6db92a375055643a53519e&oe=6066BFCD"
                 profilePic="https://scontent.fbjm1-1.fna.fbcdn.net/v/t1.0-9/44339331_2516636145229442_7134310788872798208_n.jpg?_nc_cat=108&ccb=3&_nc_sid=8bfeb9&_nc_ohc=t_50ioFoIukAX9YrOhk&_nc_ht=scontent.fbjm1-1.fna&oh=a32baa737f3663c6f2c4ff893a7c485d&oe=60649995"

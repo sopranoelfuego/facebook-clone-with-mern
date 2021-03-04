@@ -4,15 +4,22 @@
     margin-top: 30px;
     background-color: white;
     border-radius: 15px;
+    align-items: center;
+    
     
 
     box-shadow:0 15px 17px -7px rgba( 0, 0, 0, 0.75);
     width:80%;
     box-sizing: border-box;
 }
+
 .MessageSender__top {
     padding:20px 5px;
-    justify-content: center;
+}
+
+.MessageSender__top__form {
+    flex: 1;
+    display: flex;
 }
 .input__container{
     background-color:#f7f7f7;
@@ -24,13 +31,38 @@
 .input__container>input {
     margin-top: 10px;
     background-color: transparent;
+   outline:none;
     border: none;
-    outline: none
+    outline-width: none;
+}
+.input__container>input {
+    flex:1;
 }
 .MessageSender__top {
     display: flex;
     width: 100%;
+
 }
 .MessageSender__top__form {
     display:  flex;
+}
+.messageSender__bottom {
+    display: flex;
+    flex:1;
+    width: 100%
+}
+.messageSender__bottom > .messageSender__bottom__opti {
+    display: flex;
+    margin-right: 10px;
+    padding:5px 10px;
+    align-items: center;
+  
+}
+.messageSender__bottom > .messageSender__bottom__opti:hover {
+    
+    display: flex;
+    margin-right: 10px;
+    padding:5px 10px;
+    background-color: #f7f7f7  !important;
+    border-radius:30px
 }
