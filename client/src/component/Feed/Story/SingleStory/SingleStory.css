@@ -12,8 +12,22 @@
     transition: transform 100ms ease-in;
    
 }
-
+.Story__avatar {
+    margin: 10px;
+    border: 5px solid #2e81f4;
+    
+}
 
 .SingleStory:hover {
     transform:scale(1.07)
+}
+
+.SingleStory>h4 {
+
+   position: relative;
+   top: 69px !important;
+  
+    color:white;
+    text-align: justify
+
 }
