@@ -65,17 +65,17 @@
     padding:0 40px !important;
 }
 
-.header__center_option_active>.MuiSvgIcon-root:hover {
+.header__center_option_active> .MuiSvgIcon-root:hover {
     
     color:#3b5998;
 }
 .header__center_option_active {
-    background-color: #dfe3ee;
-    color:#3b5998;
-    border-radius: 10px;
-    align-items: center;
-    border-bottom: #3b5998;
-     padding: 0 30px !important; 
+
+    color:#3b5998 !important;
+    border-radius: 10px !important;
+    align-items: center !important;
+    border-bottom:  #3b5998 !important;
+     padding: 0 30px !important ; 
  } 
  
 .header__right{

@@ -4,15 +4,16 @@
     background-repeat:"no-repeat";
     background-position: center center;
     width:"200px";
-    height:"200px !important";
+
     border-radius: 10px;
     margin-right: 10px;
     box-shadow: 0 5px 17px -7px rgba(0 , 0, 0, 0.75);
     cursor: pointer;
     transition: transform 100ms ease-in;
-
-
+   
 }
+
+
 .SingleStory:hover {
     transform:scale(1.07)
 }
