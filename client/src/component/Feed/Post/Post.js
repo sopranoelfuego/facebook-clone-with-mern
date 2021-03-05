@@ -20,8 +20,9 @@ const Post = ({profilePic,imgName,timestamp,message,username}) => {
             </div>
             {/* END OF POST TOP */}
             {/* POST MESSAGE */}
-            <div className="post__message">
+            <div className="post__message__image">
                <p> {message}</p>
+                {/* Img */}
             </div>
             {/* POST OPTIONS */}
             <div className="post__options">
