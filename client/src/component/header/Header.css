@@ -65,7 +65,7 @@
     padding:0 40px !important;
 }
 
-.header__center_option_active> .MuiSvgIcon-root:hover {
+.header__center_option_active {
     
     color:#3b5998;
 }

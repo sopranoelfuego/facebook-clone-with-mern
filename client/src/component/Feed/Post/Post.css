@@ -39,9 +39,10 @@
 }
 .post__option {
     display: flex;
-    padding:5px;
+    padding: 5px  45px;
     align-items: center;
     float: 1;
+    
     
 }
 .post__option>p {
@@ -50,4 +51,5 @@
 .post__option:hover{
    background-color:#eff2f5;
    border-radius: 10px;
+   
 }

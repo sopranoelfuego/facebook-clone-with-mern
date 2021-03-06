@@ -30,7 +30,7 @@ export default function Header() {
                             <div className="header__center_option_active">
 
                                 <IconButton>
-                                <HomeIcon fontSize="large"/>
+                                <HomeIcon fontSize="large" color="primary"/>
                                 </IconButton>
                             </div>
                             <div className="header__center_option">
