@@ -2,8 +2,12 @@ import mongoose from "mongoose"
 
 
 const postModel =mongoose.Schema({
-    id:String,
-    text:String
+    user:String,
+    text:String,
+    imgName:String,
+    avatar:String,
+    timestamp:String,
+
 })
 
- export default mongoose.model("Post",postModel)
+ export default mongoose.model("Posts",postModel)

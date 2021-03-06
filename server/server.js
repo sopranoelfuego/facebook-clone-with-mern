@@ -6,9 +6,10 @@ import multer  from "multer"
 import path  from "path"
 // import pusher from " pusher"
 import {URI} from "./config/index.js"
-
+import router from "./routes/postRoutes.js"
 import Grid from "gridfs-stream"
 import GridFsStorage  from "multer-gridfs-storage"
+
 
 // INITIALIZING THE APP
 const app=express()
@@ -26,9 +27,10 @@ const con =mongoose.createConnection(URI.mongoURI,{
     useUnifiedTopology:true,
 
 })
+
 let gfs
 con.once("open",()=>{
-    console.log("connection succed and the URL is",URI)
+    app.listen(port,()=>console.log("connected succeful on port",port))
     gfs=Grid(con.db,mongoose.mongo)
     gfs.collection("images")
 
@@ -52,16 +54,13 @@ const storage=new GridFsStorage(
         }
     }
 )
+// as multer is a middleware api which helps to manupilate multipart data format
+// then is used here to save a file in the grid file system storage already prepare above
 
-mongoose.connect(URI.mongoURI,{
-    useCreateIndex:true,
-    useNewUrlParser:true,
-    useUnifiedTopology:true,
-}).then(()=> app.listen(port,()=>console.log("SUCCESS DB CONNECTED TO THE PORT",5000)))
-.catch(error => console.log("ERROR CONNECTION FAILED ",error))
 const upload=multer({storage})
 // API(ROUTES)
 app.get("/",(req,res)=>res.status(200).json({message:"welcome"}))
-app.post("/", upload.single("file"), (req, res) => {
+app.post("/api/apload/image", upload.single("file"), (req, res) => {
     res.status(201).send(req.file);
   });
+
