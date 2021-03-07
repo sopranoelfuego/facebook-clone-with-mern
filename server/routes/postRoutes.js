@@ -3,8 +3,9 @@ import {createPost,getPosts} from "../controller/post.js"
 
 
 const router=express.Router()
-router.post("/api/addpost",createPost)
-router.get("/api/getposts",getPosts)
+router.get("/",(req,res)=>res.status(200).json({message:"welcome"}))
+router.post("/addpost",createPost)
+router.get("/getposts",getPosts)
 
 
 export default router

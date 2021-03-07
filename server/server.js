@@ -28,6 +28,11 @@ const con =mongoose.createConnection(URI.mongoURI,{
 
 })
 
+mongoose.connect(URI.mongoURI,{
+    useCreateIndex:true,
+    useNewUrlParser:true,
+    useUnifiedTopology:true,
+})
 let gfs
 con.once("open",()=>{
     app.listen(port,()=>console.log("connected succeful on port",port))
@@ -59,8 +64,24 @@ const storage=new GridFsStorage(
 
 const upload=multer({storage})
 // API(ROUTES)
-app.get("/",(req,res)=>res.status(200).json({message:"welcome"}))
-app.post("/api/apload/image", upload.single("file"), (req, res) => {
+
+app.use("/api",router)
+app.post("/api/upload/image", upload.single("file"), (req, res) => {
     res.status(201).send(req.file);
   });
 
+  app.get("/api/download/image",(req,res)=>{
+      gfs.files.findOne({filename:req.query.name},(err,file)=>{
+          if(err) {res.status(500).json({isExecuted:false,error:err.message})
+        } else{
+            if(!file || file.length === 0){
+                 res.status(404).json({isExecuted:false,message:"file not found..."})
+            }else {
+                const readStream=gfs.createReadStream(file.filename)
+                readStream.pipe(res)
+            }
+        }
+          
+
+      })
+  })

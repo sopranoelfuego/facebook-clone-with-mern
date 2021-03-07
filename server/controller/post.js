@@ -15,18 +15,25 @@ const getPosts=(req,res)=>{
 }
 const createPost=async (req,res)=>{
 
-   const prepareDoc= await req.body
-  post.createCollection(prepareDoc,(err,doc)=>{
-
-      try {
-          if(doc){
-              res.status(201).json({isExecuted:true,error:null})
-          }
-          
-      } catch (err) {
+   const prepareDoc= req.body
+   await prepareDoc.save().then((err,doc)=>{
+     try {
+         res.status(201).json({isExecuted:true,error:null})
+     } catch (err) {
           res.status(500).json({isExecuted:false,error:err.message})
-      }
+     }
    })
+//   post.createCollection(prepareDoc,(err,doc)=>{
+
+//       try {
+//           if(doc){
+//               res.status(201).json({isExecuted:true,error:null})
+//           }
+          
+//       } catch (err) {
+//           res.status(500).json({isExecuted:false,error:err.message})
+//       }
+//    })
 }
 
 export {createPost,getPosts}
