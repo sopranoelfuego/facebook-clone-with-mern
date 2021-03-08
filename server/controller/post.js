@@ -1,4 +1,4 @@
-import post from "../models/Post.js"
+import Posts from "../models/Post.js"
 
 
 const getPosts=(req,res)=>{
@@ -15,10 +15,11 @@ const getPosts=(req,res)=>{
 }
 const createPost=async (req,res)=>{
 
-   const prepareDoc= req.body
+   const prepareDoc= new Posts(req.body)
+   console.log("data from frontend",req.body)
    await prepareDoc.save().then((err,doc)=>{
      try {
-         res.status(201).json({isExecuted:true,error:null})
+         res.status(201).json(doc)
      } catch (err) {
           res.status(500).json({isExecuted:false,error:err.message})
      }
@@ -34,6 +35,7 @@ const createPost=async (req,res)=>{
 //           res.status(500).json({isExecuted:false,error:err.message})
 //       }
 //    })
+
 }
 
 export {createPost,getPosts}
