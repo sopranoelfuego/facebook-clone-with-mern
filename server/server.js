@@ -94,7 +94,7 @@ app.post("/api/upload/image", upload.single("file"), (req, res) => {
           if(err)res.status(404).json({message:"image not found.."})
           res.contentType('json')
           res.send(doc)
-      })
+      }).sort({createdAt:"desc"})
   })
 //   app.get("/api/download/image",(req,res)=>{
 //       gfs.files.findOne({filename:req.query.name},(err,file)=>{
