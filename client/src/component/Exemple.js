@@ -12,10 +12,10 @@ export const Exemple = () => {
         await axios.get("http://localhost:5000/api/upload/image")
         .then((response)=>{
             const {data}=response
-            var base64Flag = 'data:image/jpeg;base64,';
+            var base64Flag = 'data:image/png;base64,';
             var imgStr=arrayBufferTobase64(data.img.data.data)
             
-                url=base64Flag + imgStr
+                setImg({url:base64Flag + imgStr})
             
 
             console.log("file decoded fro frontend",url)
@@ -36,7 +36,7 @@ export const Exemple = () => {
     return (
         <div>
             hello this is exemple
-            <img src={url} alt="image file"/>
+            <img src={img.url} alt="image file"/>
 
         </div>
     )

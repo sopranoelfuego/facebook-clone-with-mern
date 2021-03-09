@@ -6,7 +6,7 @@ import multer  from "multer"
 import path  from "path"
 import fs from "fs"
 // import pusher from " pusher"
-import {URI} from "./config/index.js"
+// import {URI} from "./config/index.js"
 import router from "./routes/postRoutes.js"
 import Grid from "gridfs-stream"
 import GridFsStorage  from "multer-gridfs-storage"
@@ -23,6 +23,7 @@ app.use(bodyParser.json())
 app.use(cors()) 
 
 // // DB CONFIGURATION
+ const URI={mongoURI:`mongodb://localhost:27017/facebook`}
 const con =mongoose.createConnection(URI.mongoURI,{
     useCreateIndex:true,
     useNewUrlParser:true,
